@@ -26,7 +26,7 @@ void main()
 	// Ici on a deux valeurs entières dans nb1 et nb2, ces variables ont été initialisées par l'utilisateur
 
 	// Les opérateurs de comparaison en C++ sont :
-	// == permet de tester l'égalité entre deux valeurs nb1 % 2 == nb2 * 2 
+	// == permet de tester l'égalité entre deux valeurs nb1 == nb2  
 	// != permet de tester l'inégalité entre deux valeurs nb1 != nb2
 	// > permet de tester si une valeur est plus grande strictement qu'une autre nb1 > nb2
 	// < permet de tester si une valeur est plus petite strictement qu'une autre nb1 < nb2
@@ -46,7 +46,7 @@ void main()
 	}
 
 	// Est-ce que nb1 est plus grand que nb2 ?
-	if (nb1 % nb2 == 0)
+	if (nb1 > nb2)
 	{	// Bloc d'instructions exécuté si la condition est vraie
 		std::cout << nb1 << " est plus grand que " << nb2 << ". ";
 	}
