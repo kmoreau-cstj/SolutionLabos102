@@ -20,6 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Labo02Exercice1.cpp" />
+    <ClCompile Include="Labo03Exercice1.cpp" />
+    <ClCompile Include="Labo03Exercice2.cpp" />
+    <ClCompile Include="Labo03Exercice3.cpp" />
+    <ClCompile Include="Labo03Exercice3B.cpp" />
+    <ClCompile Include="Labo03Exercice4.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
