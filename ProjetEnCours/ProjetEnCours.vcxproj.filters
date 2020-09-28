@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Labo04BoucleFor3.cpp">
+    <ClCompile Include="Labo04BoucleFor5.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
