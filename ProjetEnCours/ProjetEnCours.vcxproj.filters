@@ -27,5 +27,8 @@
     <ClCompile Include="Labo04BoucleFor2.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Labo04BoucleFor1.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Labo04BoucleFor.cpp" />
+    <ClCompile Include="Labo04BoucleFor1.cpp" />
     <ClCompile Include="Labo04BoucleFor2.cpp" />
     <ClCompile Include="Labo04BoucleWhile.cpp" />
     <ClCompile Include="LaboModele.cpp" />
