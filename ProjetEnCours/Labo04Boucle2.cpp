@@ -100,7 +100,6 @@ int main()
 		// Le programme doit demander à l'utilisateur son choix
 		cout << "Votre choix --> ";
 		cin >> typeEmploye;
-
 	}
 
 
@@ -113,6 +112,8 @@ int main()
 		{
 			// 1. Cadre : montantPaie = salaireCadre;
 		case '1':
+			cout << "Veuillez entrer le salaire du cadre : " << endl;
+			cin >> salaireCadre;
 			montantPaie = salaireCadre;
 			break;
 			// 2. Travailleur à taux horaire : 
@@ -120,6 +121,11 @@ int main()
 					// sinon montantPaie = (nbHeures - TEMPS_SUPP) * TAUX_SUPP *tauxHoraire + tauxHoraire * TEMPS_SUPP
 
 		case '2':
+			cout << "Veuillez entrer le nombre d'heures travaillées cette semaine : ";
+			cin >> nbHeures;
+			cout << "Veuillez entrer le taux horaire : ";
+			cin >> tauxHoraire;
+
 			if (nbHeures <= TEMPS_SUPP)
 			{
 				montantPaie = tauxHoraire * nbHeures;
@@ -128,13 +134,24 @@ int main()
 			{
 				montantPaie = (nbHeures - TEMPS_SUPP) * TAUX_SUPP * tauxHoraire + tauxHoraire * TEMPS_SUPP;
 			}
+			break;
 			// 3. Travailleur à la commission : montantPaie = SALAIRE_FIXE + ventesHebdo * TAUX_VENTES
 		case '3':
+			cout << "Veuillez entrer le montant des ventes : " << endl;
+			cin >> ventesHebdo;
+
 			montantPaie = SALAIRE_FIXE + ventesHebdo * TAUX_VENTES;
+			break;
 			// 4. Travailleur à la pièce : montantPaie = nbArticles * tauxArticle
 		case '4':
+			cout << "Veuillez entrer le nombre d'articles fabriqués cette semaine : ";
+			cin >> nbArticles;
+			cout << "Veuillez entrer le taux de l'article : ";
+			cin >> tauxArticle;
+
 			montantPaie = nbArticles * tauxArticle;
-		}
+			break;
+		} // fin du switch
 			
 		//le programme affiche le montant du salaire
 		cout << "Le salaire de l'employé est : " << montantPaie << endl;

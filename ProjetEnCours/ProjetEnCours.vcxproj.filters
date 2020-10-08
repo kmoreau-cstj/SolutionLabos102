@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Devinette.cpp">
+    <ClCompile Include="Labo04Boucle2.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="LaboModele.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

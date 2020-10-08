@@ -45,6 +45,7 @@ int main()
 	{
 		// Si on est dans la boucle, l'utilisateur n'a pas gagné et n'a pas encore perdu
 		cout << "Ce n'est pas le bon nombre" << endl;
+
 		if (nombre > random)
 		{
 			cout << "votre nombre est trop grand" << endl;

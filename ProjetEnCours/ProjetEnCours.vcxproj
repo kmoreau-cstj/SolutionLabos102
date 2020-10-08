@@ -19,7 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Devinette.cpp" />
+    <ClCompile Include="Labo04Boucle2.cpp" />
+    <ClCompile Include="LaboModele.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
