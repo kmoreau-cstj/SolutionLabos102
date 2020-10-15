@@ -19,8 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Labo04Boucle2.cpp" />
-    <ClCompile Include="LaboModele.cpp" />
+    <ClCompile Include="Labo05Fonction1.cpp" />
+    <ClCompile Include="Labo05MesFonctions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Labo05MesFonctions.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
