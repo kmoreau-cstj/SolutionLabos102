@@ -107,6 +107,7 @@ int main()
 	// Ici on appelle la fonction pour qu'elle puisse s'exécuter
 	afficherMenu();
 
+
 	// Le programme doit demander à l'utilisateur son choix
 	// ici on appelle la fonction : on doit lui donner les valeurs des paramètres et on doit mémoriser la valeur de retour de la fonction
 	typeEmploye = validerChoixMenu(CHOIX_MIN, CHOIX_MAX, 'q');
