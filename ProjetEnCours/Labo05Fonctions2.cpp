@@ -14,6 +14,7 @@ int main()
 
 	// Déclaration des variables au début du programme
 	int nombre;
+	double grandNombre;
 
 	cout << "Veuillez entrer un nombre pour calculer son carré : ";
 	cin >> nombre;
@@ -21,6 +22,11 @@ int main()
 	cout << "Voici le carré de " << nombre << " : " << calculerCarre(nombre) << endl;
 
 	cout << "Voici le cube de " << nombre << " : " << calculerCube(nombre) << endl;
+
+	grandNombre = nombre;
+
+	cout << "Voici le cube de " << nombre << " : " << calculerCube(grandNombre) << endl;
+
 
 
 

@@ -9,3 +9,8 @@ int calculerCube(int nb)
 {
     return nb*nb*nb;
 }
+
+double calculerCube(double nb)
+{
+    return nb*nb*nb;
+}
