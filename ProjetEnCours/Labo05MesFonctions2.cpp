@@ -1,4 +1,7 @@
 #include "Labo05MesFonctions2.h"
+#include <iostream>
+
+using namespace std;
 
 int calculerCarre(int entier)
 {
@@ -30,10 +33,18 @@ double calculerFactorielle(int valeur)
 int validerNombrePositif(int nb)
 {
     // Tant que le nombre n'est pas positif on le redemande
-    while (true)
+    while (nb < 0)
     {
+        cout << "Erreur : le nombre doit être positif. " << endl;
 
+        cout << "Veuillez entrer un entier positif : ";
+        cin >> nb;
     }
 
+    return nb;
+}
+
+int validerAnnee(int an)
+{
     return 0;
 }

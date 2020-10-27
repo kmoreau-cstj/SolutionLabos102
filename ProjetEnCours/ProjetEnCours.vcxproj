@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Labo05Fonctions2.cpp" />
+    <ClCompile Include="Labo05Fonctions3.cpp" />
     <ClCompile Include="Labo05MesFonctions2.cpp" />
   </ItemGroup>
   <ItemGroup>

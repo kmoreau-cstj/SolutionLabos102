@@ -10,3 +10,5 @@ int calculerCube(int nb);
 double calculerCube(double nb);
 double calculerFactorielle(int valeur);
 int validerNombrePositif(int nb);
+int validerAnnee(int an);
+bool etreBissextile(int annee);
