@@ -30,7 +30,7 @@ int main()
 	}
 
 	// on veut simuler le lancé d'un dé : 1 à 6
-	for (int i = 0; i < 1000; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		cout << "Lancé #" << i + 1 << " : " << genererAlea(1,6)  << endl;
 		// nb%2 : 0 ou 1
