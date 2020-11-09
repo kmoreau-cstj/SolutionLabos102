@@ -18,20 +18,26 @@ int main()
 	const int MAX = 10;
 
 	// Déclaration des variables au début du programme
-	int nombre;
+	double nombre;
+	char symbole;
+
+
+	cout << "Veuillez entrer un caractère :";
+	symbole = lireCaractere();
+	cout << "Votre caractère est : " << symbole << endl;
 
 	// demander le nombre à l'utilisateur
-	cout << "Veuillez entrer un nombre entier :";
+	cout << "Veuillez entrer un nombre réel :";
 	//cin >> nombre;
-	nombre = lireEntier();
+	nombre = lireReel();
 
 	// Le redemander si le nombre n'est pas compris entre 1 et 10
 	while (nombre < MIN || nombre >MAX)
 	{
 		cout << "Erreur : le nombre doit être compris entre " << MIN << " et " << MAX << "." << endl;
-		cout << "Veuillez entrer un nombre entier :";
+		cout << "Veuillez entrer un nombre réel :";
 		//cin >> nombre;
-		nombre = lireEntier();
+		nombre = lireReel();
 
 	}
 
