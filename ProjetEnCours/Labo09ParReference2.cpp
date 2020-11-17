@@ -38,8 +38,12 @@ int main()
 	vector<int> vec{ 12,0,42 }; // ,0,0,68,0,-15,89,0,0,0,13,27,52,2,0,7,0,0};
 	vector<int> vecVide;
 
-	// Afficher le contenu du vecteur à l'aide d'une fonction
+	vector<string> vecEmploye;
+	vector<float> vecVentes;
 
+
+	// Afficher le contenu du vecteur à l'aide d'une fonction
+	/*
 	afficherContenuVecteur(vec);
 	cout << "Ajouter 5 valeurs dans vecVide" << endl;
 	ajouterValeurALaFinVecteur(vecVide, 5);
@@ -49,15 +53,21 @@ int main()
 	afficherContenuVecteur(vecVide);
 	cout << "Contenu de vec après ajout :" << endl;
 	afficherContenuVecteur(vec);
-
-
+	*/
+	/*
 	// 1. Écrivez une fonction qui saisit les valeurs dans un vecteur tant que l’utilisateur n’a pas entré la valeur 
 	// passée en paramètre pour mettre fin à la saisie, par exemple -1.
+	cout << "Ajout de valeurs dans vec : " << endl;
 	saisirValeurVecteur(vec, -1);
 	afficherContenuVecteur(vec);
+	cout << "Ajout de valeurs dans vecVide : " << endl;
 	saisirValeurVecteur(vecVide, -999);
 	afficherContenuVecteur(vecVide);
-
+	*/
+	// 250 + 7% des ventes
+	saisirEmployeVente(vecEmploye, vecVentes, "fin");
+	afficherEmployeVente(vecEmploye, vecVentes);
+	afficherSalaireEmploye(vecEmploye, vecVentes);
 
 	return 0;
 }

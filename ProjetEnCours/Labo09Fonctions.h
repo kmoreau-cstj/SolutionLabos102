@@ -25,3 +25,13 @@ void afficherContenuVecteur(vector<int> vec);
 void ajouterValeurALaFinVecteur(vector<int>& vec, int nbElement);
 
 void saisirValeurVecteur(vector<int>& vec, int quitter);
+
+// Ici pas le choix de la &(par référence) car on modifie le contenu du vecteur
+void saisirEmployeVente(vector<string>& vecEmploye, vector<float>& vecVentes, string quitter);
+
+// Ici on choisit par référence pour des questions de rapidité (pas de recopie) et d'économie sur la mémoire
+void afficherEmployeVente(const vector<string>& vecEmploye, const vector<float>& vecVentes);
+void afficherSalaireEmploye(vector<string> vecEmploye, vector<float>vecVentes);
+float calculerSalaireEmploye(const vector<float>& vecVentes, int numeroCase, float salaireFixe, float pourcentage);
+
+
