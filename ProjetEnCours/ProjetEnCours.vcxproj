@@ -19,13 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Labo06Fonctions.cpp" />
-    <ClCompile Include="Labo09Fonctions.cpp" />
-    <ClCompile Include="Labo09ParReference2.cpp" />
+    <ClCompile Include="Labo10Fichier.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Labo06Fonctions.h" />
-    <ClInclude Include="Labo09Fonctions.h" />
+    <Text Include="Donnees.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
