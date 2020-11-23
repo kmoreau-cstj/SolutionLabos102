@@ -60,27 +60,110 @@ int main()
 	int noteEval1;				// Champ 3 du fichier : int car c'est des valeurs entières
 	int noteEval2;
 	int noteEval3;
+	// 2. les résultats à calculer ou à afficher : il faut en général initialiser ces variables
+	int noteFinale = 0;				// Au départ ou si pas de données dans le fichier, la note finale est de 0;
+	int nbEtudiant = 0;				// Au départ du programme ou si le fichier est vide, il n'y a pas d'étudiant, donc 0
+	float moyenne = 0;
+	// Au départ du programme ou si pas de données dans le fichier, on ne peut pas déterminer le max, le min et le meilleur Etudiant
+	int noteMax;
+	int noteMin;
+	string meilleurEtudiant;
 
+	// La lecture des informations permet de mettre à jour le eof
+	// Ici On TENTE de lire des informations, si cela ne fonctionne pas eof sera à vrai, sinon il sera à faux
+	// AVANT LA BOUCLE : il faut initialiser la variable de boucle : ici on le fait en tentant une lecture dans le fichier
 	ifDonnee >> nomEtudiant;
 	ifDonnee >> prenomEtudiant;
 	ifDonnee >> noteEval1;
 	ifDonnee >> noteEval2;
 	ifDonnee >> noteEval3;
 
-
-
-	cout << "Voici les informations lues dans le fichier : " << endl;
-	cout << "Nom " << nomEtudiant << endl;
-	cout << "prénom " << prenomEtudiant << endl;
-	cout << "note 1 : " << noteEval1 << endl;
-	cout << "note 2 : " << noteEval2 << endl;
-	cout << "note 3 : " << noteEval3 << endl;
-
-
+	// Lors de la lecture du premier enregistrement, on peut déterminer le min et le max
+	if (!ifDonnee.eof())
+	{
+		noteFinale = noteEval1 + noteEval2 + noteEval3;
+		noteMin = noteFinale;
+		noteMax = noteFinale;
+		meilleurEtudiant = prenomEtudiant + " " + nomEtudiant;
+	}
 
 
 
 
+	// Tant que la fin du fichier n'a pas été atteinte, on traite les informations qui ont été lues dans le fichier
+	while (!ifDonnee.eof())					// eof est une fonction qui indique si la fin du fichier a été rencontrée
+											// End Of File (eof)
+	{
+		// Ici il y avait des informations à lire dans le fichier, on peut les traiter (faire des calculs, afficher, ...)
+		cout << "Voici les informations lues dans le fichier : " << endl;
+		cout << "Nom " << nomEtudiant << endl;
+		cout << "prénom " << prenomEtudiant << endl;
+		cout << "note 1 : " << noteEval1 << endl;
+		cout << "note 2 : " << noteEval2 << endl;
+		cout << "note 3 : " << noteEval3 << endl;
+		// On peut faire toutes sortes de traitement sur les données qui ont été lues
+		// On va calculer la note finale de chaque étudiant
+		noteFinale = noteEval1 + noteEval2 + noteEval3;
+		cout << "note finale : " << noteFinale << endl;
+		// Dire si l'étudiant a réussi ou non le cours
+		if (noteFinale >= 60)
+			cout << "Félicitations ! Vous avez réussi le cours" << endl;
+		else
+			cout << "Désolé, malgré tous vos efforts, il faudra reprendre le cours." << endl;
+		// Mettre à jour la moyenne, la somme dans un premier temps
+		moyenne = moyenne + noteFinale;
+		nbEtudiant++;
+		// Il faut s'assurer que le max et le meilleur étudiant n'a pas changé
+		if (noteFinale > noteMax)
+		{
+			noteMax = noteFinale;
+			meilleurEtudiant = prenomEtudiant + " " + nomEtudiant;
+		}
+		if (noteFinale < noteMin)
+		{
+			noteMin = noteFinale;
+		}
+
+
+
+
+		// A LA FIN DE LA BOUCLE  : il faut réinitialiser la variable de boucle : On tente de lire le prochain enregistrement
+		ifDonnee >> nomEtudiant;
+		ifDonnee >> prenomEtudiant;
+		ifDonnee >> noteEval1;
+		ifDonnee >> noteEval2;
+		ifDonnee >> noteEval3;
+	}
+
+	// APRÈS la boucle
+	// Ici tous les enregistrements ont été traités. Mais il se peut qu'il reste d'autres calculs à faire
+	// On voudrait afficher la moyenne du groupe : 
+
+	// On doit s'assurer si on peut calculer la moyenne, il faut au moins un étudiant
+	if (nbEtudiant > 0)
+	{
+		moyenne = moyenne / nbEtudiant;
+		cout << "La moyenne du groupe est : " << moyenne << endl;
+		// On voudrait connaitre la note la plus haute et le nom et prénom de l'étudiant (idée de Mikaël)
+		cout << "La note la plus haute est : " << noteMax << " obtenue par " << meilleurEtudiant << endl;
+		// On voudrait connaitre la note la plus basse
+		cout << "La note la plus basse est : " << noteMin << endl;
+		// On voudrait connaitre le nombre d'étudiants dans le groupe
+		cout << "Le groupe contient " << nbEtudiant << " étudiants" << endl;
+	}
+	else
+	{
+		cout << "Le fichier de données est vide" << endl;
+	}
+
+
+
+
+
+	// Ici on a lu tous les enregistrements, on a atteint la fin du fichier
+	cout << "Fin du fichier" << endl;
+	// Il faut fermer le fichier
+	ifDonnee.close();
 
 	return 0;
 }
