@@ -1,0 +1,20 @@
+------------------------------------------------------------------------------------------
+                      Résultats du cours de programmation structurée
+------------------------------------------------------------------------------------------
+Nom                 Prénom                  Eval 1    Eval 2    Eval 3     Total Résultats
+------------------------------------------------------------------------------------------
+Audet               Nicole                   30.00     30.00     38.00     98.00 Succès   
+Boileur             Claude                   10.00     20.00     30.00     60.00 Succès   
+Bonhomme            Fernand                  30.00     30.00     30.00     90.00 Succès   
+Charron             guy                       2.00      2.00      2.00      6.00 Echec    
+Dubreuil            Lucienne                 30.00     30.00     39.00     99.00 Succès   
+Etienne             Luc                      10.00     10.00     10.00     30.00 Echec    
+Fortin              MarieNoel                20.00     18.00     18.00     56.00 Echec    
+Fournier            Richard                  20.00     20.00     21.00     61.00 Succès   
+Lalonde             claudine                 15.00     20.00     25.00     60.00 Succès   
+Malouin             Jule                     20.00     10.00     12.00     42.00 Echec    
+Maranda             Armande                  30.00     30.00     38.00     98.00 Succès   
+La moyenne du groupe est : 63.64
+La note la plus haute est : 99.00 obtenue par Lucienne Dubreuil
+La note la plus basse est : 6.00
+Le groupe contient 11 étudiants
