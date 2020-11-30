@@ -15,10 +15,9 @@ int main()
 	// Déclaration des constantes
 	const string CHAPITRE = "DonneesChapitres.txt";			// Le nom du fichier qui fournit les informations de départ
 	const string TDM = "TDM.txt";							// Le nom de fichier qui sera généré par le programme
-	const string TITRE = "Table des matières";
-	const string NOM_SECTION = "Chapitre";
-	const char POINT_DE_SUITE = '.';
-	const char DEUX_POINTS = ':';
+	
+
+
 
 	// Déclaration des variables au début du programme
 	// 0. Dès que le programme utilise des fichiers sur le disque dur, il faut créer des canaux vers chacun de ces fichiers
@@ -41,13 +40,30 @@ int main()
 	// On va créer le fichier de sortie à l'aide d'une fonction
 	creerFichierSortie(TDM, canalTDM);
 
-	// On tente de lire un premier enregistrement (une première ligne) dans le fichier source à l'aide d'une fonction : ici c'est deux informations
+	// Ici, comme le fichier de sortie existe, on va écrire l'en-tête à l'aide d'une fonction
+	ecrireEnTete(canalTDM, TITRE, 3 /* indique le nombre de lignes vides après le titre*/ );
+
+	// On TENTE de lire un premier enregistrement (une première ligne) dans le fichier source à l'aide d'une fonction : ici c'est deux informations
 	// Ici dans le fichier de données, il y a seulement deux informations différentes : nom du chapitre et le numéro de page
 	// Mais s'il y avait 10 champs dans le fichier source, il faudrait passer 10 paramètres à la fonction lireEnregistrement
 	// La liste des paramètres serait très longue ==> solution : on va passer un paquet d'information : on regroupe toute l'information dans une
 	// structure. Une structure est une sorte d'enveloppe qui contiendra toutes les informations d'un même enregistrement
 	lireEnregistrement(canalChapitre, leChapitre);
-	leChapitre = lireEnregistrement(canalChapitre);
+
+	// On s'assure qu'il y a bien des informations dans la variable leChapitre
+	// Tant que la fin du fichier n'a pas été atteinte, on peut lire les enregistrements suivants
+	while (!canalChapitre.eof())
+	{
+		// Pour vérifier que l'on a bien lu dans le fichier, on affiche les infos à l'écran
+		cout << leChapitre.nomDuChapitre << endl;
+		cout << leChapitre.numeroPage;  // << endl; c'est bizarre ??????
+
+		// A LA FIN de la boucle, il faut réinitialiser la variable de boucle : eof : 
+		// il faut TENTER de lire l'enregistrement suivant
+
+		leChapitre = lireEnregistrement(canalChapitre);
+	}
+
 
 
 

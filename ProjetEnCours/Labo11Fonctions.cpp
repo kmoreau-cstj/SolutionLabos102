@@ -29,3 +29,32 @@ void creerFichierSortie(const string NOM_FICHIER_A_CREER, ofstream& canalSortie)
 
 
 }
+
+void lireEnregistrement(ifstream& canalEntree, chapitre& unChapitre)
+{
+	// On doit lire le titre du chapitre. Le titre contient des espaces ==> getline
+	getline(canalEntree, unChapitre.nomDuChapitre, ';');
+	// On doit lire le numéro de la page. C'est un int. getline ne lit que des chaines de caractères. 
+	// On lit avec quoi ????? les becs de canard : >> pour lire les données. 
+	canalEntree >> unChapitre.numeroPage;
+
+}
+
+chapitre lireEnregistrement(ifstream& canalEntree)
+{
+	//Déclaration des variables
+	chapitre unChapitreALire;
+	
+	// On doit lire le titre du chapitre dans le canal. Il a toujours des espaces ==> getline
+	getline(canalEntree, unChapitreALire.nomDuChapitre, ';');
+	// On lit le numéro de la page. Int donc on utilise >>
+	canalEntree >> unChapitreALire.numeroPage;
+
+	return unChapitreALire;
+}
+
+void ecrireEnTete(ofstream& canalSortie, const string ENTETE, int nbLignesVideApresTitre)
+{
+	//                                   Table des matières                                   
+	canalSortie <<setw((LARGEUR_PAGE -ENTETE.length())/2 ) << " " <<  ENTETE << endl;
+}
