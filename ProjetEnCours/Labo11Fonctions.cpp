@@ -37,6 +37,10 @@ void lireEnregistrement(ifstream& canalEntree, chapitre& unChapitre)
 	// On doit lire le numéro de la page. C'est un int. getline ne lit que des chaines de caractères. 
 	// On lit avec quoi ????? les becs de canard : >> pour lire les données. 
 	canalEntree >> unChapitre.numeroPage;
+	// On sait que les becs de canard laissent trainer les séparateurs (espace, \t, \n)
+	// Il faut les ignorer
+	canalEntree.ignore(1, '\n');			// Cela va déplacer le curseur de lecture après la fin de la ligne
+
 
 }
 
@@ -49,6 +53,9 @@ chapitre lireEnregistrement(ifstream& canalEntree)
 	getline(canalEntree, unChapitreALire.nomDuChapitre, ';');
 	// On lit le numéro de la page. Int donc on utilise >>
 	canalEntree >> unChapitreALire.numeroPage;
+	// On sait que les becs de canard laissent trainer les séparateurs (espace, \t, \n)
+	// Il faut les ignorer
+	canalEntree.ignore(1, '\n');			// Cela va déplacer le curseur de lecture après la fin de la ligne
 
 	return unChapitreALire;
 }
@@ -57,4 +64,15 @@ void ecrireEnTete(ofstream& canalSortie, const string ENTETE, int nbLignesVideAp
 {
 	//                                   Table des matières                                   
 	canalSortie <<setw((LARGEUR_PAGE -ENTETE.length())/2 ) << " " <<  ENTETE << endl;
+}
+
+void ecrireEnregistrement(ofstream& canalSortie, chapitre chapitreAEcrire, int numero)
+{
+	// Chapitre  1 : Introduction au C++.................................................1
+	// Chapitre 10 : Introduction au C++.................................................1
+
+	canalSortie << left << setw(COL1) << NOM_SECTION << right << setw(COL2) << numero;
+	canalSortie << setw(COL3) << DEUX_POINTS;
+	canalSortie << left << setfill(POINT_DE_SUITE) << setw(COL4) << chapitreAEcrire.nomDuChapitre;
+	canalSortie << right << setw(COL5) << chapitreAEcrire.numeroPage << setfill(' ') << endl;
 }

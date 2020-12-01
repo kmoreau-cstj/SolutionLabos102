@@ -54,15 +54,23 @@ int main()
 	// Tant que la fin du fichier n'a pas été atteinte, on peut lire les enregistrements suivants
 	while (!canalChapitre.eof())
 	{
-		// Pour vérifier que l'on a bien lu dans le fichier, on affiche les infos à l'écran
-		cout << leChapitre.nomDuChapitre << endl;
-		cout << leChapitre.numeroPage;  // << endl; c'est bizarre ??????
+		// Chapitre 1  : Introduction au C++.................................................1
+		// On va formater l'affichage du titre pour obtenir la table des matières
+		ecrireEnregistrement(canalTDM, leChapitre, numeroChapitre);
+
+		// On prépare à afficher le prochain chapitre, on augmente le numéro du chapitre
+		numeroChapitre++;
 
 		// A LA FIN de la boucle, il faut réinitialiser la variable de boucle : eof : 
 		// il faut TENTER de lire l'enregistrement suivant
 
 		leChapitre = lireEnregistrement(canalChapitre);
 	}
+
+
+	// Il faut fermer les fichiers
+	canalChapitre.close();
+	canalTDM.close();
 
 
 

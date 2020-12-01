@@ -1,1 +1,6 @@
-                                    Table des matières
+                         Table des matières
+Section  1 : Introduction au C++...................................1
+Section  2 : Instructions conditionnelles.........................31
+Section  3 : Itérations...........................................57
+Section  4 : Fonctions............................................89
+Section  5 : Vecteurs............................................127
