@@ -1,0 +1,5 @@
+Renault;Paul;125, rue des Lilas;St-Jérôme;J7Z 2G4;QC;12-05-1990;30;450-436-8512;514-705-8745;450-435-6958;PaulRe@hotmail.com;
+Martin;Jean Michel;6587, rue des Chênes;St-Jérôme;J7Z 2H4;QC;12-07-1965;55;450-438-1111;514-705-9854;450-435-6958;MartinJM@hotmail.com;
+Ouellette Hénault;Julie;541, rue des tulipes;St-Jérôme;J7Z 2K4;QC;17-05-1988;32;450-436-6545;514-419-0202;450-432-9854;JulieOH@gmail.com;
+Trudel;Gilbert;1458, rue des Peupliers;St-Jérôme;J7Z 2L4;QC;18-08-1948;72;450-436-6548;514-874-6622;450-563-5847;GilTrudel@Yahoo.com;
+Desjardins;Tiffanie;784, rue des Charmes;St-Jérôme;J7Z 8T6;QC;02-09-1995;25;450-436-9874;514-362-5485;450-435-6589;tiff@gmail.com;
