@@ -15,17 +15,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Labo11Exercice2.cpp">
+    <ClCompile Include="Labo11-ListeMateriel-Test-Debut.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Labo11-ListeMateriel.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Contacts.txt">
+    <Text Include="ListeMateriel.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Labo11Exercice2Fonctions.h">
+    <ClInclude Include="Labo11-ListeMateriel.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
